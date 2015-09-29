@@ -1,0 +1,24 @@
+{
+    "name": "nigelgreenway/tutis",
+    "description": "A framework agnostic authentication library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nigel Greenway",
+            "email": "nigel_greenway@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tutis\\": "lib"
+        },
+        "psr-0": {
+            "": "src"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpspec/phpspec": "^2.3"
+    }
+}

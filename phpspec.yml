@@ -1,0 +1,6 @@
+suites:
+    tutis_suite:
+        namespace: Tutis
+        psr4_prefix: Tutis
+        src_path: lib
+formatter.name: pretty
