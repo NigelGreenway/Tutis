@@ -56,6 +56,13 @@ interface PassInterface
     public function isActive();
 
     /**
+     * Return the username
+     *
+     * @return string
+     */
+    public function toUsername();
+
+    /**
      * Get the hashed version of the password
      *
      * @return string
