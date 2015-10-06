@@ -62,7 +62,7 @@ final class Pass implements PassInterface
         return $this->username;
     }
 
-    public function getPassword()
+    public function toPassword()
     {
         return $this->password;
     }

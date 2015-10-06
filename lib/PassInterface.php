@@ -60,7 +60,7 @@ interface PassInterface
      *
      * @return string
      */
-    public function getPassword();
+    public function toPassword();
 
     /**
      * Get the active status of the pass
