@@ -4,7 +4,6 @@ namespace spec\Tutis;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Tutis\Exception\InactivePassException;
 use Tutis\Exception\InvalidPasswordException;
 use Tutis\Pass;
 use Tutis\PassInterface;
