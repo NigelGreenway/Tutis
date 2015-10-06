@@ -47,7 +47,7 @@ class PassSpec extends ObjectBehavior
 
     function it_should_return_the_username()
     {
-        $this->getUsername()->shouldReturn('username');
+        $this->toUsername()->shouldReturn('username');
     }
 
     function it_should_return_a_hashed_version_of_the_given_password()

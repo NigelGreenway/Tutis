@@ -57,7 +57,7 @@ final class Pass implements PassInterface
         return $this->activeState === self::ACTIVE;
     }
 
-    public function getUsername()
+    public function toUsername()
     {
         return $this->username;
     }
