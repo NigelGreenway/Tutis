@@ -35,7 +35,7 @@ class BasicPasswordProvider implements PasswordProviderInterface
     }
 
     /** {@inheritDoc} */
-    public static function verify($password, $hash)
+    public static function verify($password, $hash, array $options = [])
     {
         if (password_verify($password, $hash) === false) {
             throw new InvalidPasswordException;
