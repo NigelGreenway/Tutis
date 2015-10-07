@@ -25,12 +25,13 @@ interface PasswordProviderInterface
      *
      * @param string $password
      * @param string $hash
+     * @param array  $options
      *
      * @throw InvalidPasswordException
      *
      * @return bool
      */
-    public static function verify($password, $hash);
+    public static function verify($password, $hash, array $options = []);
 
     /**
      * Get the hashed password
