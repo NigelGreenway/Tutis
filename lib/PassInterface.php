@@ -29,11 +29,11 @@ interface PassInterface
     /**
      * Verify the password matches the given hash and that the pass is active
      *
-     * @param $username
-     * @param $password
-     * @param $hash
-     * @param $passwordProviderFQCN
-     * @param $activeStatus
+     * @param string  $username
+     * @param string  $password
+     * @param string  $hash
+     * @param string  $passwordProviderFQCN
+     * @param integer $activeStatus
      *
      * @throws InactivePassException
      *
