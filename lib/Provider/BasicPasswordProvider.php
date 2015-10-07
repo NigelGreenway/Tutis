@@ -22,7 +22,7 @@ class BasicPasswordProvider implements PasswordProviderInterface
     private $hash;
 
     /**
-     * Object constructor
+     * Class constructor
      *
      * @param string $hash The hashed password
      */
