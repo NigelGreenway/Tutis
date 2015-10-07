@@ -21,7 +21,7 @@ interface PasswordProviderInterface
     public static function hash($password, array $options = []);
 
     /**
-     * Verifies if the password
+     * Verifies if the password matches
      *
      * @param string $password
      * @param string $hash
