@@ -64,7 +64,11 @@ final class Pass implements PassInterface
               $activeStatus,
         array $options = []
     ) {
-        $passwordProviderFQCN::verify($password, $hash);
+        $passwordProviderFQCN::verify(
+            $password,
+            $hash,
+            $options
+        );
 
         if ($activeStatus === self::INACTIVE) {
             throw new InactivePassException;
