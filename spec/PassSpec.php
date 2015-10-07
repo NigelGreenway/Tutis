@@ -36,7 +36,7 @@ class PassSpec extends ObjectBehavior
 
     function it_should_return_an_active_status_of_1()
     {
-        $this->getActiveStatus()->shouldReturn(1);
+        $this->currentStatus()->shouldReturn(1);
     }
 
     function it_should_return_false_for_an_inactive_pass()

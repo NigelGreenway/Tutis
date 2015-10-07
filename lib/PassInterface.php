@@ -70,9 +70,9 @@ interface PassInterface
     public function toPassword();
 
     /**
-     * Get the active status of the pass
+     * Return the current
      *
      * @return int
      */
-    public function getActiveStatus();
+    public function currentStatus();
 }

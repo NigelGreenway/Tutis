@@ -67,7 +67,7 @@ final class Pass implements PassInterface
         return $this->password;
     }
 
-    public function getActiveStatus()
+    public function currentStatus()
     {
         return $this->activeState;
     }
