@@ -39,7 +39,13 @@ interface PassInterface
      *
      * @return self
      */
-    public static function authenticate($username, $password, $hash, $passwordProviderFQCN, $activeStatus);
+    public static function authenticate(
+        $username,
+        $password,
+        $hash,
+        $passwordProviderFQCN,
+        $activeStatus
+    );
 
     /**
      * Set the active status to inactive/0
