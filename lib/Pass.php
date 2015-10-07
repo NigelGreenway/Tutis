@@ -33,8 +33,14 @@ final class Pass implements PassInterface
         );
     }
 
-    public static function authenticate($username, $password, $hash, $passwordProviderFQCN, $activeStatus)
-    {
+    public static function authenticate(
+              $username,
+              $password,
+              $hash,
+              $passwordProviderFQCN,
+              $activeStatus,
+        array $options = []
+    ) {
         $passwordProviderFQCN::verify($password, $hash);
 
         if ($activeStatus === self::INACTIVE) {
