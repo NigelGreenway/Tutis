@@ -83,12 +83,6 @@ final class Pass implements PassInterface
     }
 
     /** {@inheritDoc} */
-    public function isActive()
-    {
-        return $this->activeState === self::ACTIVE;
-    }
-
-    /** {@inheritDoc} */
     public function toUsername()
     {
         return $this->username;
@@ -104,5 +98,11 @@ final class Pass implements PassInterface
     public function currentStatus()
     {
         return $this->activeState;
+    }
+
+    /** {@inheritDoc} */
+    public function isActive()
+    {
+        return $this->activeState === self::ACTIVE;
     }
 }
