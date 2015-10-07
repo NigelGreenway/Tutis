@@ -34,17 +34,19 @@ interface PassInterface
      * @param string  $hash
      * @param string  $passwordProviderFQCN
      * @param integer $activeStatus
+     * @param array   $options
      *
      * @throws InactivePassException
      *
      * @return self
      */
     public static function authenticate(
-        $username,
-        $password,
-        $hash,
-        $passwordProviderFQCN,
-        $activeStatus
+              $username,
+              $password,
+              $hash,
+              $passwordProviderFQCN,
+              $activeStatus,
+        array $options = []
     );
 
     /**
