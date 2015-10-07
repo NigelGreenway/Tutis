@@ -69,6 +69,7 @@ final class Pass implements PassInterface
         if ($activeStatus === self::INACTIVE) {
             throw new InactivePassException;
         }
+
         return new self(
             $username,
             BasicPasswordProvider::hash($password),
