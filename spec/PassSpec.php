@@ -39,10 +39,15 @@ class PassSpec extends ObjectBehavior
         $this->currentStatus()->shouldReturn(1);
     }
 
-    function it_should_return_false_for_an_inactive_pass()
+    function it_should_be_inactive()
     {
         $this->deactivate();
-        $this->isActive()->shouldReturn(false);
+        $this->shouldNotBeActive();
+    }
+
+    function it_should_return_true()
+    {
+        $this->isActive()->shouldReturn(true);
     }
 
     function it_should_return_the_username()
