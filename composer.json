@@ -22,5 +22,8 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^2.3"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpspec r"
     }
 }
