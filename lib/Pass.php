@@ -90,7 +90,7 @@ final class Pass implements PassInterface
     }
 
     /** {@inheritDoc} */
-    public function toPassword()
+    public function toHash()
     {
         return $this->password;
     }

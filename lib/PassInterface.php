@@ -86,7 +86,7 @@ interface PassInterface
      *
      * @return string
      */
-    public function toPassword();
+    public function toHash();
 
     /**
      * Return the current

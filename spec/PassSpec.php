@@ -57,7 +57,7 @@ class PassSpec extends ObjectBehavior
 
     function it_should_return_a_hashed_version_of_the_given_password()
     {
-        $this->toPassword()->shouldNotReturn('password1');
+        $this->toHash()->shouldNotReturn('password1');
     }
 
     function it_should_throw_InvalidPasswordException_with_bad_password()
