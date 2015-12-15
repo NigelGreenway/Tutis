@@ -52,11 +52,11 @@ interface PassInterface
      * @return self
      */
     public static function authenticate(
-              $username,
-              $password,
-              $hash,
-              $passwordHandlerFQCN,
-              $activeStatus,
+        $username,
+        $password,
+        $hash,
+        $passwordHandlerFQCN,
+        $activeStatus,
         array $options = []
     );
 

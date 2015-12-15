@@ -57,11 +57,11 @@ final class Pass implements PassInterface
 
     /** {@inheritDoc} */
     public static function authenticate(
-              $username,
-              $password,
-              $hash,
-              $passwordHandlerFQCN,
-              $activeStatus,
+        $username,
+        $password,
+        $hash,
+        $passwordHandlerFQCN,
+        $activeStatus,
         array $options = []
     ) {
         $passwordHandlerFQCN::verify($password, $hash, $options);
