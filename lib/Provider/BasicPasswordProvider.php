@@ -14,7 +14,7 @@ use Tutis\PasswordProviderInterface;
  * A basic password provider
  *
  * @package Tutis
- * @author  Nigel Greenway <nigel_greenway@me.com>
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 class BasicPasswordProvider implements PasswordProviderInterface
 {

@@ -14,7 +14,7 @@ use Tutis\Provider\BasicPasswordProvider;
  * The user Pass for authentication usage
  *
  * @package Tutis
- * @author  Nigel Greenway <nigel_greenway@me.com>
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 final class Pass implements PassInterface
 {

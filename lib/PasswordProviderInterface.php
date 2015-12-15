@@ -6,7 +6,7 @@ namespace Tutis;
  * Interface for a password provider
  *
  * @package Tutis
- * @author  Nigel Greenway <nigel_greenway@me.com>
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 interface PasswordProviderInterface
 {
