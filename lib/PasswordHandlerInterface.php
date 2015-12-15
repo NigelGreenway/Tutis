@@ -3,7 +3,7 @@
 namespace Tutis;
 
 /**
- * Interface for a password provider
+ * Interface for a password handler
  *
  * @package Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>

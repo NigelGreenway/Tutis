@@ -17,9 +17,7 @@ use Exception;
  */
 final class InactivePassException extends Exception
 {
-    /**
-     * Class constructor
-     */
+    /** Class constructor */
     public function __construct()
     {
         return parent::__construct('Inactive Pass');

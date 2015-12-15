@@ -1,9 +1,20 @@
 <?php
-
+/**
+ * Part of the Tutis library
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace Tutis;
 
 use Tutis\Exception\InactivePassException;
 
+/**
+ * Interface for a Pass implementation
+ *
+ * @package Tutis
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
+ */
 interface PassInterface
 {
     /** @const INACTIVE Mark the pass as inactive */
@@ -15,14 +26,14 @@ interface PassInterface
      * Generate a pass
      *
      * @param string                    $username
-     * @param PasswordHandlerInterface $passwordProvider
+     * @param PasswordHandlerInterface  $passwordHandler
      * @param int                       $activeStatus
      *
      * @return mixed
      */
     public static function generate(
         $username,
-        PasswordHandlerInterface $passwordProvider,
+        PasswordHandlerInterface $passwordHandler,
         $activeStatus = self::ACTIVE
     );
 
@@ -32,7 +43,7 @@ interface PassInterface
      * @param string  $username
      * @param string  $password
      * @param string  $hash
-     * @param string  $passwordProviderFQCN
+     * @param string  $passwordHandlerFQCN
      * @param integer $activeStatus
      * @param array   $options
      *
@@ -44,7 +55,7 @@ interface PassInterface
               $username,
               $password,
               $hash,
-              $passwordProviderFQCN,
+              $passwordHandlerFQCN,
               $activeStatus,
         array $options = []
     );

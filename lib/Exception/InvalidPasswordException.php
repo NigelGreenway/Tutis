@@ -17,6 +17,7 @@ use Exception;
  */
 final class InvalidPasswordException extends Exception
 {
+    /** Class Constructor */
     public function __construct()
     {
         return parent::__construct('An invalid password as been given');

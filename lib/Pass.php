@@ -29,28 +29,28 @@ final class Pass implements PassInterface
      * Class constructor
      *
      * @param string                    $username
-     * @param PasswordHandlerInterface $passwordProvider
+     * @param PasswordHandlerInterface  $passwordHandler
      * @param int                       $activeState
      */
     private function __construct(
         $username,
-        PasswordHandlerInterface $passwordProvider,
+        PasswordHandlerInterface $passwordHandler,
         $activeState = self::ACTIVE
     ) {
         $this->username    = $username;
-        $this->password    = $passwordProvider->getHash();
+        $this->password    = $passwordHandler->getHash();
         $this->activeState = $activeState;
     }
 
     /** {@inheritDoc} */
     public static function generate(
         $username,
-        PasswordHandlerInterface $passwordProvider,
+        PasswordHandlerInterface $passwordHandler,
         $activeStatus = self::ACTIVE
     ) {
         return new self(
             $username,
-            $passwordProvider,
+            $passwordHandler,
             $activeStatus
         );
     }
@@ -60,15 +60,11 @@ final class Pass implements PassInterface
               $username,
               $password,
               $hash,
-              $passwordProviderFQCN,
+              $passwordHandlerFQCN,
               $activeStatus,
         array $options = []
     ) {
-        $passwordProviderFQCN::verify(
-            $password,
-            $hash,
-            $options
-        );
+        $passwordHandlerFQCN::verify($password, $hash, $options);
 
         if ($activeStatus === self::INACTIVE) {
             throw new InactivePassException;
