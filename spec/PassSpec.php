@@ -9,6 +9,14 @@ use Tutis\Pass;
 use Tutis\PassInterface;
 use Tutis\Handler\BasicPasswordHandler;
 
+/**
+ * Spec for Pass
+ *
+ * @mixin \Tutis\Pass
+ *
+ * @package spec\Tutis
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
+ */
 class PassSpec extends ObjectBehavior
 {
     function let()

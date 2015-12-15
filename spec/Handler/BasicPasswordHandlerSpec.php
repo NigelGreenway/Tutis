@@ -7,6 +7,14 @@ use Prophecy\Argument;
 use Tutis\Exception\InvalidPasswordException;
 use Tutis\PasswordHandlerInterface;
 
+/**
+ * Spec for BasicPasswordHandler
+ *
+ * @mixin \Tutis\Handler\BasicPasswordHandler
+ *
+ * @package spec\Tutis\Handler
+ * @author  Nigel Greenway <github@futurepixels.co.uk>
+ */
 class BasicPasswordHandlerSpec extends ObjectBehavior
 {
     function let()
