@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Nigel Greenway",
-            "email": "nigel_greenway@me.com"
+            "email": "github@futurepixels.co.uk"
         }
     ],
     "autoload": {
@@ -17,8 +17,13 @@
             "": "src"
         }
     },
-    "require": {},
+    "require": {
+        "php": ">=5.5"
+    },
     "require-dev": {
         "phpspec/phpspec": "^2.3"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpspec r"
     }
 }
