@@ -20,7 +20,7 @@ final class Pass implements PassInterface
     /** @var string */
     private $username;
     /** @var string */
-    private $password;
+    private $hash;
     /** @var integer */
     private $activeState;
 
@@ -37,7 +37,7 @@ final class Pass implements PassInterface
         $activeState = self::ACTIVE
     ) {
         $this->username    = $username;
-        $this->password    = $passwordHandler->getHash();
+        $this->hash        = $passwordHandler->getHash();
         $this->activeState = $activeState;
     }
 
@@ -91,7 +91,7 @@ final class Pass implements PassInterface
     /** {@inheritDoc} */
     public function toHash()
     {
-        return $this->password;
+        return $this->hash;
     }
 
     /** {@inheritDoc} */
