@@ -15,15 +15,15 @@ interface PassInterface
      * Generate a pass
      *
      * @param string                    $username
-     * @param PasswordProviderInterface $passwordProvider
+     * @param PasswordHandlerInterface $passwordProvider
      * @param int                       $activeStatus
      *
      * @return mixed
      */
     public static function generate(
-                                  $username,
-        PasswordProviderInterface $passwordProvider,
-                                  $activeStatus = self::ACTIVE
+        $username,
+        PasswordHandlerInterface $passwordProvider,
+        $activeStatus = self::ACTIVE
     );
 
     /**

@@ -7,7 +7,7 @@ use Prophecy\Argument;
 use Tutis\Exception\InvalidPasswordException;
 use Tutis\Pass;
 use Tutis\PassInterface;
-use Tutis\Provider\BasicPasswordProvider;
+use Tutis\Handler\BasicPasswordHandler;
 
 class PassSpec extends ObjectBehavior
 {
@@ -15,7 +15,7 @@ class PassSpec extends ObjectBehavior
     {
         $this->beConstructedThroughGenerate(
             'username',
-            BasicPasswordProvider::hash('password1', [])
+            BasicPasswordHandler::hash('password1', [])
         );
     }
 
@@ -62,7 +62,7 @@ class PassSpec extends ObjectBehavior
 
     function it_should_throw_InvalidPasswordException_with_bad_password()
     {
-        $password = BasicPasswordProvider::hash('password1');
+        $password = BasicPasswordHandler::hash('password1');
 
         $this
             ->shouldThrow(InvalidPasswordException::class)
@@ -70,14 +70,14 @@ class PassSpec extends ObjectBehavior
                 'username',
                 'password2',
                 $password->getHash(),
-                BasicPasswordProvider::class,
+                BasicPasswordHandler::class,
                 Pass::ACTIVE
             );
     }
 
     function it_should_throw_InactivePassException_when_pass_set_to_inactive()
     {
-        $password = BasicPasswordProvider::hash('password1');
+        $password = BasicPasswordHandler::hash('password1');
 
         $this
             ->shouldThrow()
@@ -85,7 +85,7 @@ class PassSpec extends ObjectBehavior
                 'username',
                 'password1',
                 $password->getHash(),
-                BasicPasswordProvider::class,
+                BasicPasswordHandler::class,
                 Pass::INACTIVE
             );
     }

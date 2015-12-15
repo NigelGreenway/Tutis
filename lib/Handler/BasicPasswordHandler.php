@@ -5,10 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Tutis\Provider;
+namespace Tutis\Handler;
 
 use Tutis\Exception\InvalidPasswordException;
-use Tutis\PasswordProviderInterface;
+use Tutis\PasswordHandlerInterface;
 
 /**
  * A basic password provider
@@ -16,7 +16,7 @@ use Tutis\PasswordProviderInterface;
  * @package Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
-class BasicPasswordProvider implements PasswordProviderInterface
+class BasicPasswordHandler implements PasswordHandlerInterface
 {
     /** @var string */
     private $hash;

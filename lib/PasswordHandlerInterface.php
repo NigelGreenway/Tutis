@@ -8,7 +8,7 @@ namespace Tutis;
  * @package Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
-interface PasswordProviderInterface
+interface PasswordHandlerInterface
 {
     /**
      * Generate the hash from the raw password

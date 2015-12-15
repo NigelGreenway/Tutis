@@ -1,12 +1,13 @@
 <?php
 
-namespace spec\Tutis\Provider;
+namespace spec\Tutis\Handler;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Tutis\Exception\InvalidPasswordException;
+use Tutis\PasswordHandlerInterface;
 
-class BasicPasswordProviderSpec extends ObjectBehavior
+class BasicPasswordHandlerSpec extends ObjectBehavior
 {
     function let()
     {
@@ -18,7 +19,7 @@ class BasicPasswordProviderSpec extends ObjectBehavior
 
     function it_should_implement_PasswordProviderInterface()
     {
-        $this->shouldHaveType('\Tutis\PasswordProviderInterface');
+        $this->shouldHaveType(PasswordHandlerInterface::class);
     }
 
     function it_should_not_return_the_raw_password()

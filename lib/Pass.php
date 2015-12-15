@@ -8,7 +8,7 @@
 namespace Tutis;
 
 use Tutis\Exception\InactivePassException;
-use Tutis\Provider\BasicPasswordProvider;
+use Tutis\Handler\BasicPasswordHandler;
 
 /**
  * The user Pass for authentication usage
@@ -29,12 +29,12 @@ final class Pass implements PassInterface
      * Class constructor
      *
      * @param string                    $username
-     * @param PasswordProviderInterface $passwordProvider
+     * @param PasswordHandlerInterface $passwordProvider
      * @param int                       $activeState
      */
     private function __construct(
         $username,
-        PasswordProviderInterface $passwordProvider,
+        PasswordHandlerInterface $passwordProvider,
         $activeState = self::ACTIVE
     ) {
         $this->username    = $username;
@@ -44,9 +44,9 @@ final class Pass implements PassInterface
 
     /** {@inheritDoc} */
     public static function generate(
-                                  $username,
-        PasswordProviderInterface $passwordProvider,
-                                  $activeStatus = self::ACTIVE
+        $username,
+        PasswordHandlerInterface $passwordProvider,
+        $activeStatus = self::ACTIVE
     ) {
         return new self(
             $username,
@@ -76,7 +76,7 @@ final class Pass implements PassInterface
 
         return new self(
             $username,
-            BasicPasswordProvider::hash($password),
+            BasicPasswordHandler::hash($password),
             $activeStatus
         );
     }
