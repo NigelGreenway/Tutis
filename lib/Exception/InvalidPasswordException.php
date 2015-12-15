@@ -12,7 +12,6 @@ use Exception;
 /**
  * Invalid password exception
  *
- * @package Tutis\Exception
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 final class InvalidPasswordException extends Exception

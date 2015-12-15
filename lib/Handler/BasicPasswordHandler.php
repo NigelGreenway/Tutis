@@ -13,7 +13,6 @@ use Tutis\PasswordHandlerInterface;
 /**
  * A basic password handler
  *
- * @package Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 class BasicPasswordHandler implements PasswordHandlerInterface

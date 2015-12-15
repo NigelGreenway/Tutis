@@ -12,7 +12,6 @@ use Tutis\Exception\InactivePassException;
 /**
  * Interface for a Pass implementation
  *
- * @package Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 interface PassInterface

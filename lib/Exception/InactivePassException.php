@@ -12,7 +12,6 @@ use Exception;
 /**
  * Inactive Pass exception
  *
- * @package Tutis\Exception
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 final class InactivePassException extends Exception

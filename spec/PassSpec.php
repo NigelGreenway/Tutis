@@ -14,7 +14,6 @@ use Tutis\Handler\BasicPasswordHandler;
  *
  * @mixin \Tutis\Pass
  *
- * @package spec\Tutis
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 class PassSpec extends ObjectBehavior

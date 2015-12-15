@@ -12,7 +12,6 @@ use Tutis\PasswordHandlerInterface;
  *
  * @mixin \Tutis\Handler\BasicPasswordHandler
  *
- * @package spec\Tutis\Handler
  * @author  Nigel Greenway <github@futurepixels.co.uk>
  */
 class BasicPasswordHandlerSpec extends ObjectBehavior
