@@ -19,6 +19,6 @@ final class InactivePassException extends Exception
     /** Class constructor */
     public function __construct()
     {
-        return parent::__construct('Inactive Pass');
+        parent::__construct('Inactive Pass');
     }
 }
