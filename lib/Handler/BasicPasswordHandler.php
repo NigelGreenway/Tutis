@@ -30,12 +30,20 @@ class BasicPasswordHandler implements PasswordHandlerInterface
         $this->hash = $hash;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     *
+     * @throws \RuntimeException
+     */
     public static function hash($password, array $options = [])
     {
         $hash = password_hash($password, PASSWORD_DEFAULT, $options);
 
-        return new self($hash);
+        if ($hash !== false) {
+            return new self($hash);
+        }
+
+        throw new \RuntimeException('Unsuccessful `password_hash` function call');
     }
 
     /** {@inheritDoc} */
